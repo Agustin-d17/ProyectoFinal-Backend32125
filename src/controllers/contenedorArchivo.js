@@ -38,6 +38,7 @@ class ContenedorArchivo {
             const content = await this.readFile()
             const element = content.find(el => el.id === id)
             
+            console.log(element)
             return element
         }catch(err){
             console.log(err)
@@ -48,6 +49,7 @@ class ContenedorArchivo {
         try{
             const content = await this.readFile()
             
+            console.log(content)
             return content 
         }catch(err){
             console.log(err)
