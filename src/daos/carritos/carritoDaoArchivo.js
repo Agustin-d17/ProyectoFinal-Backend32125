@@ -13,6 +13,15 @@ class CarritoDaoArchivo extends ContenedorArchivo {
         await this.modifyById(cartId, cart)
         console.log(cart)
     }
+
+    async deleteProdByid(cartId, prodId) {
+        const cart = await this.getById(`${cartId}`)
+        const index = cart.products.findIndex(product => product.id === prodId)
+
+        cart.products.splice(index, 1)
+        await this.modifyById(cartId, cart)
+        console.log(cart)
+    }
 }
 
 module.exports = CarritoDaoArchivo
