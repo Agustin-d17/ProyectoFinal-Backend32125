@@ -1,5 +1,5 @@
 const ProductosDaoMemoria = require('../daos/productos/productosDaoMemoria')
 
-const productosMemoria = new ProductosDaoMemoria()
+const productosMemoriacontent = new ProductosDaoMemoria()
 
-// productosMemoria.getAll()
+module.exports = productosMemoriacontent

@@ -7,4 +7,4 @@ class productosDaoMongo extends ContenedorMongoDb {
     }
 }
 
-module.exports = productosDaoMongo
+module.exports = productosDaoMongo 
