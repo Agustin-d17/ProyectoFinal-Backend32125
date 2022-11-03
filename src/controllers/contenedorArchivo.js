@@ -81,14 +81,14 @@ class ContenedorArchivo {
         }
     }
 
-    async modifyById(id, product) {
+    async modifyById(id, obj) {
         try {
             let content = await this.readFile();
             content = await content.map(el => {
                 if (el.id === id) {
                     el = {
                         id: id,
-                        ...product,
+                        ...obj,
                     };
                     return el;
                 } else {
