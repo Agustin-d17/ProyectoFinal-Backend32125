@@ -1,8 +1,8 @@
 const ContenedorArchivo = require('../../controllers/contenedorArchivo')
 
 class ProductosDaoArchivo extends ContenedorArchivo {
-    constructor() {
-        super('./data/products.json')
+    constructor(file) {
+        super(file)
     }
 }
 

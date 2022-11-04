@@ -61,7 +61,7 @@ class ContenedorArchivo {
 
         try {
           const content = await this.readFile()
-          newContent = content.filter((product) => product.id !== id)
+          newContent = content.filter((doc) => parseInt(doc.id) !== id)
           await fs.promises.writeFile(this.file, JSON.stringify(newContent), 'utf-8')
         
           return 'Elemento eliminado'

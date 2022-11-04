@@ -15,7 +15,7 @@ class ContenedorFirebase{
             await doc.create(obj)
 
             console.log('Se agrego el elemento a la coleccion')
-
+            return doc.id
         } catch (error) {
             console.error(error)
         }
@@ -36,9 +36,10 @@ class ContenedorFirebase{
         try {
             const doc = this.query.doc(`${id}`)
             const item = await doc.get()
-            const response = item.data
+            const response = item.data()
 
             console.log(response)
+            return response
         } catch (error) {
             console.error(error)
         }
