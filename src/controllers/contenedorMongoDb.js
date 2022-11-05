@@ -23,7 +23,8 @@ class ContenedorMongoDb {
             const newDoc = new this.model(obj)
             await newDoc.save()
             
-            console.log('Se guardo el documento correctamente')
+            console.log('Se guardo el documento correctamente', newDoc._id)
+            return `Se guardo el documento correctamente. Id: ${newDoc._id}`
         } catch (error) {
             console.error(error)
         }
@@ -40,11 +41,23 @@ class ContenedorMongoDb {
         }
     }
 
+    async getById(id){
+        try {
+            let doc = await this.model.find({_id: id})
+
+            console.log(doc)
+            return doc
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     async updateById(id, update){
         try {
             let docUpdate = await this.model.updateone({_id: id}, update)
             
             console.log('El documento se actualizo correctamente', docUpdate)
+            return 'El documento se actualizo correctamente', docUpdate
         } catch (error) {
             console.error(error)
         }

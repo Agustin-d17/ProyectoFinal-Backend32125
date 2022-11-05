@@ -1,8 +1,12 @@
 const {Schema, model} = require('mongoose')
 
 const carritosSchema = new Schema({
-    productos: {
+    products: {
         type: 'array'
+    },
+    timestamp: {
+        type: 'string',
+        unique: true
     }
 })
 
