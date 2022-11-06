@@ -14,6 +14,6 @@ const product = {
 
 // productosArchivoContent.save(product)
 // productosArchivoContent.getAll()
-// productosArchivoContent.getById()
-// productosArchivoContent.modifyById('', {...product, stock: "0"})
-// productosArchivoContent.deleteById('')
+// productosArchivoContent.getById('2')
+// productosArchivoContent.modifyById('4', {...product, stock: "0"})
+// productosArchivoContent.deleteById(4)

@@ -24,7 +24,7 @@ class ContenedorFirebase{
     async getAll() {
         try {
             const queryDocs = await this.query.get()
-            let docs = queryDocs.docs.map(doc => ({id: doc.id, ...doc.data}))
+            let docs = queryDocs.docs.map(doc => ({id: doc.id, ...doc.data()}))
 
             console.log(docs)
         } catch (error) {

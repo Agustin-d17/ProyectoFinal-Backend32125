@@ -31,7 +31,7 @@ class CarritoDaoArchivo extends ContenedorArchivo {
         console.log(cart)
     }
 
-    async removeProd(cartId, prodId) {
+    async removeProduct(cartId, prodId) {
         const cart = await this.getById(`${cartId}`)
         const index = cart.products.findIndex(product => parseInt(product.id) === prodId)
 

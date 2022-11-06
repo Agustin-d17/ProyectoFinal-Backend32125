@@ -6,9 +6,9 @@ module.exports = carritoArchivoContent
 
 // carritoArchivoContent.newCart()
 // carritoArchivoContent.getAll()
-// carritoArchivoContent.getById()
+// carritoArchivoContent.getById('2')
 // carritoArchivoContent.addProduct({title: 'producto de prueba 1', id: "1"}, 1)
 // carritoArchivoContent.addProduct({title: 'producto de prueba 2', id: "2"}, 1)
-// carritoArchivoContent.removeProduct(1, 2)
+// carritoArchivoContent.removeProduct(1, 1)
 // carritoArchivoContent.deleteById(1)
 

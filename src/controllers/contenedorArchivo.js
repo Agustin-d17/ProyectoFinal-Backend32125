@@ -85,7 +85,7 @@ class ContenedorArchivo {
         try {
             let content = await this.readFile();
             content = await content.map(el => {
-                if (el.id === id) {
+                if (parseInt(el.id) === id) {
                     el = {
                         id: id,
                         ...obj,
