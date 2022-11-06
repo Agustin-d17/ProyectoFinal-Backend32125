@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1", 
-    "start": "node ./src/models/carritoFirebaseContent.js"
+    "start": "node ./src/models/carritoMongoContent.js"
   },
   "author": "",
   "license": "ISC",

@@ -43,7 +43,7 @@ class ContenedorMongoDb {
 
     async getById(id){
         try {
-            let doc = await this.model.find({_id: id})
+            let doc = await this.model.findOne({_id: id})
 
             console.log(doc)
             return doc
@@ -54,7 +54,7 @@ class ContenedorMongoDb {
 
     async updateById(id, update){
         try {
-            let docUpdate = await this.model.updateone({_id: id}, update)
+            let docUpdate = await this.model.update({_id: id}, update)
             
             console.log('El documento se actualizo correctamente', docUpdate)
             return 'El documento se actualizo correctamente', docUpdate

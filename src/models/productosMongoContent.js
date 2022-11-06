@@ -4,4 +4,8 @@ const productosMongoContent = new ProductosDaoMongo()
 
 module.exports = productosMongoContent
 
-// productosMongoContent.getAll()
+// productosFirebaseContent.saveDoc()
+// productosFirebaseContent.getAll()
+// productosFirebaseContent.getById()
+// productosFirebaseContent.updateById('',{price: 1000})
+// productosFirebaseContent.deleteById('')

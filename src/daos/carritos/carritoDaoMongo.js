@@ -15,14 +15,22 @@ class CarritosDaoMongo extends ContenedorMongoDb {
     }
 
     async addProduct(product, cartId){
-        let cart = await this.getById(cartId) //Me devuelve el array con el carrito adentro, arreglar eso
+        let cart = await this.getById(cartId) 
         let newProductList = [product, ...cart.products]
 
         let response = await this.updateById(cartId, {products: newProductList})
         console.log(response)
     }
 
-    async removeProduct(product, cartId){}
+    async removeProduct(productId, cartId){
+        let cart = await this.getById(cartId) 
+        let newProductList = cart.products
+        let index = newProductList.findIndex(product => product.id === productId)
+        newProductList.splice(index, 1)
+
+        const response = await this.updateById(cartId, {products: newProductList})
+        console.log(response)
+    }
 }
 
 module.exports = CarritosDaoMongo 
