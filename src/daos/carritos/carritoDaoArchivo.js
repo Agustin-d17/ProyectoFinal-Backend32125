@@ -33,7 +33,7 @@ class CarritoDaoArchivo extends ContenedorArchivo {
 
     async removeProd(cartId, prodId) {
         const cart = await this.getById(`${cartId}`)
-        const index = cart.products.findIndex(product => product.id === prodId)
+        const index = cart.products.findIndex(product => parseInt(product.id) === prodId)
 
         cart.products.splice(index, 1)
         await this.modifyById(cartId, cart)

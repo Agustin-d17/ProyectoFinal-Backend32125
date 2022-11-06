@@ -23,7 +23,6 @@ class ContenedorMongoDb {
             const newDoc = new this.model(obj)
             await newDoc.save()
             
-            console.log('Se guardo el documento correctamente', newDoc._id)
             return `Se guardo el documento correctamente. Id: ${newDoc._id}`
         } catch (error) {
             console.error(error)
