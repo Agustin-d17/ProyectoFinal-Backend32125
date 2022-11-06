@@ -12,9 +12,18 @@ const product = {
     stock:"15"
 }
 
+const product2 = {
+    title:"Teclado RGB", 
+    description:"Teclado RGB",
+    thumbnail:"https://example.com",
+    price:"8000",
+    stock:"10"
+}
 
-// productosFirebaseContent.newProduct(product)
-// productosFirebaseContent.getAll()
-// productosFirebaseContent.getById()
-// productosFirebaseContent.updateById('',{price: 1000})
-// productosFirebaseContent.deleteById('')
+
+// productosMongoContent.newProduct(product)
+// productosMongoContent.newProduct(product2)
+// productosMongoContent.getAll()
+// productosMongoContent.getById()
+// productosMongoContent.updateById('',{price: 1000})
+// productosMongoContent.deleteById('')

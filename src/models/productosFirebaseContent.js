@@ -13,7 +13,16 @@ const product = {
     stock:"15"
 }
 
+const product2 = {
+    title:"Teclado RGB", 
+    description:"Teclado RGB",
+    thumbnail:"https://example.com",
+    price:"8000",
+    stock:"10"
+}
+
 // productosFirebaseContent.newProduct(product)
+// productosFirebaseContent.newProduct(product2)
 // productosFirebaseContent.getAll()
 // productosFirebaseContent.getById()
 // productosFirebaseContent.updateById('',{price: 1000})
